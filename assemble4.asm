@@ -1,0 +1,7 @@
+MOV CX, [BX]
+MOV [BP], DL
+MOV [DI], BH
+MOV [DI], [BX]
+MOV AL, [EDX]
+MOV ECX, [EBX]
+MOV RAX, [RDX]
