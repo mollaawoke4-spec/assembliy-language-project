@@ -1,12 +1,14 @@
-```asm
-0000  8B C3       MOV AX, BX
-0002  8A CE       MOV CL, DH
-0004  8A CD       MOV CL, CH
-0006  66 8B C3    MOV EAX, EBX
-0009  66 8B D8    MOV EBX, EAX
-000C  66 8B C8    MOV ECX, EAX
-000F  66 8B D0    MOV EDX, EAX
-0012  8C C8       MOV AX, CS
-0014  8E D8       MOV DS, AX
-0016  8E C8       MOV CS, AX
-```
+MODEL TINY           ; Single segment model
+.CODE                 ; Start of code segment
+.STARTUP              ; Program entry point
+
+    XOR AX, AX        ; Clear AX (faster than MOV AX, 0)
+    XOR BX, BX        ; Clear BX
+    XOR CX, CX        ; Clear CX
+
+    MOV SI, AX        ; Copy AX into SI
+    MOV DI, AX        ; Copy AX into DI
+    MOV BP, AX        ; Copy AX into BP
+
+.EXIT                 ; Exit to DOS
+END                   ; End of program
