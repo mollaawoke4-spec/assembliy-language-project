@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 node_modules/
 backend/node_modules/
@@ -33,3 +34,14 @@ Thumbs.db
 
 # Private uploads
 uploads/
+=======
+﻿.env
+.env.*
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+dist/
+build/
+__pycache__/
+*.log
+>>>>>>> 8713a78e626719ce70c78385819a4b78967cbf0e
